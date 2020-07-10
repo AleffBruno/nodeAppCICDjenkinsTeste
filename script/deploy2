@@ -1,0 +1,9 @@
+#!/bin/sh
+
+ssh root@40.123.37.4 <<EOF
+ cd /var/www/html/nodeAppCICDjenkinsTeste
+ git pull
+ npm install — production
+ pm2 restart all
+ exit
+EOF
